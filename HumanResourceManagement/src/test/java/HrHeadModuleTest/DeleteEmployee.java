@@ -8,5 +8,6 @@ public class DeleteEmployee {
 	public void delete()
 	{
 		System.out.println(" Deleted employee successful");
+		System.out.println("");
 	}
 }
