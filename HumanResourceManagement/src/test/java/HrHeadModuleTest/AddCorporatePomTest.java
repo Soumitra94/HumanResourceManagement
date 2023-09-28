@@ -74,6 +74,8 @@ public class AddCorporatePomTest
 	    HomePage hp=new HomePage(driver);
 	    hp.corporate();
 	    
+	    driver.quit();
+	    
 //	    
 	}
 
