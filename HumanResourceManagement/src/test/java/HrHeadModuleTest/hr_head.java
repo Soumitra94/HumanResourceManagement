@@ -45,6 +45,8 @@ public class hr_head
 	    driver.findElement(By.xpath("//i[@class='fa fa-power-off']")).click();
 	    Alert c=driver.switchTo().alert();
 	    c.accept();
+	    System.out.println("Accepted");
+	    driver.quit();
 	    
         
 		
