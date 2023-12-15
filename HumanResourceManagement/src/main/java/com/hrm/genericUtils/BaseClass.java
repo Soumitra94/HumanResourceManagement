@@ -79,26 +79,6 @@ public class BaseClass
 				lp.login(USERNAME, PASSWORD, text);
 		
 	}
-	@AfterMethod(alwaysRun = true)
-	public void confAM()
-	{
-		HomePage hp=new HomePage(driver);
-		hp.getUserLookUpImage();
-		System.out.println("----signout from application---");
-		
-	}
-	@AfterClass(alwaysRun = true)
-	public void confAC()
-	{
-		driver.quit();
-		System.out.println("---close the browser---");
-	}
-	@AfterSuite(alwaysRun = true)
-	public void confAS() throws Throwable
-	{
-		dLib.connectToDB();
-		System.out.println("----db closed----");
-	}
 	
 
 
