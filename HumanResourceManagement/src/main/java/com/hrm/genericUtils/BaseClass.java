@@ -30,40 +30,7 @@ public class BaseClass
 	public JavaUtility jLib=new JavaUtility();
 	public WebDriverUtilities wLib=new WebDriverUtilities();
 	
-	public WebDriver driver;
 	
-	@BeforeSuite(alwaysRun = true)
-	public void confBS() throws Throwable
-	{
-		dLib.connectToDB();
-		System.out.println("----connect to database----");
-	}
-	
-	@Parameters("browser")
-	@BeforeClass(alwaysRun = true)
-	public void confBC() throws Throwable
-	{
-		String browser=fLib.getPropertyKeyValue("browser");
-		if(browser.equalsIgnoreCase("chrome"))
-		{
-		WebDriverManager.chromedriver().setup();
-
-			driver=new ChromeDriver();
-		}
-		else if(browser.equalsIgnoreCase("edge"))
-		{
-			WebDriverManager.edgedriver().setup();
-			driver=new EdgeDriver();
-			
-		}
-		else
-		{
-			System.out.println("----invalid browser---");
-		}
-		System.out.println("----launch the browser---");
-		sdriver=driver;
-		
-		wLib.maximizeTheBrowser(driver);
 		
 	}
 	@BeforeMethod(alwaysRun = true)
